@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto currency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="My_web.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+
+<body style="background-color: rgba(60,60,60,0.5)">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+    <a class="navbar-brand" href="#">Currency <img src="currency_img.png" style="width: 15%"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+                <a class="nav-link text-white Home-item" onclick="HomeRedirect()">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                    current price
+                </a>
+
+                <div class="dropdown-menu Currencies" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" onclick="ShowEtherPrice()">Ethereum<img src="Ether_img.svg" style="margin-left: 10%"></a>
+                    <a class="dropdown-item" onclick="ShowBTCPrice()">BitCoin <img src="BitCoin_img.svg" style="margin-left: 20%"></a>
+                    <a class="dropdown-item" onclick="ShowTetherPrice()">Tethereum<img src="Tether_img.svg" style="margin-left: 5%"></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">other Currencies</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white disabled" onclick="ContactUs()" href="#">Contact Us</a>
+            </li>
+
+        </ul>
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
+        <h4 id="ip" class="mr-4 mt-2"></h4>
+        <span id="span" class="mr-3"></span>
+    </div>
+</nav>
+
+<div id="result" style="color: white"></div>
+
+<br>
+
+<table class="table w-25 ml-3">
+    <thead class="thead-dark w-25">
+    <tr>
+        <th scope="col">number</th>
+        <th scope="col">US Dollar</th>
+        <th scope="col">CA Dollar</th>
+        <th scope="col">Euro</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="bg-white">
+        <th scope="row">Price (Toman)</th>
+        <td id="USD"></td>
+        <td id="CAD"></td>
+        <td id="EURO"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div id="EtherPrice" style="color: black"></div>
+<div id="BTCPrice" style="color: black"></div>
+<div id="TetherPrice" style="color: black"></div>
+
+
+
+<div id="contact" class="" style="position: absolute;right: 2%;top: 15%">
+
+</div>
+
+
+<footer class="page-footer font-small cyan darken-3 mt-5 align-items-end" id="footer">
+
+    <div class="container align-items-center justify-content-end justify-items-end align-content-end align-items-end text-center" style="left: 12%;bottom: 5%;position: absolute">
+        <div class="row">
+            <div class="col-md-12 py-2 flex-center text-center mt-4" style="text-decoration: none">
+                <div class="mb-1 flex-center" style="text-decoration: none">
+
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" href="https://facebook.com"></i>
+                    </a>
+
+                    <a class="tw-ic">
+                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" href="https://twitter.com"></i>
+                    </a>
+
+                    <a class="gplus-ic">
+                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x" href="https://google-plus.com"> </i>
+                    </a>
+
+                    <a class="li-ic">
+                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"  href="https://linkedin.com"></i>
+                    </a>
+
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" href="https://instagram.com"> </i>
+                    </a>
+
+                    <a class="pin-ic">
+                        <i class="fab fa-pinterest fa-lg white-text fa-2x" href="https://pinterest.com"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3" style="position: absolute;left: 41%;bottom: 0">© 2020 Copyright:
+        <a href="#" onclick="HomeRedirect()" class="text-white" style="text-decoration: none"> localHost.com</a>
+    </div>
+</footer>
+
+
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('sc9uj1aMBwCItriKS');
+    })();
+</script>
+<script src="My_web.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
